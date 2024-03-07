@@ -13,36 +13,59 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayout"
-            android:layout_width="391dp"
+            android:layout_width="0dp"
             android:layout_height="57dp"
-            android:hint="Player Name"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="300dp"
+            android:layout_marginEnd="32dp"
+            android:hint="Your Answer"
             app:hintAnimationEnabled="true"
             app:hintEnabled="true"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.5">
+            app:layout_constraintTop_toTopOf="parent">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/txtName"
+                android:id="@+id/txtAnswer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/btnStart"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="275dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginEnd="20dp"
+            android:id="@+id/btnSubmit"
+            android:layout_width="336dp"
+            android:layout_height="41dp"
+            android:layout_marginStart="37dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="38dp"
             android:background="#7F45E4"
-            android:text="Start"
+            android:text="SUBMIT ANSWER"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="165dp"
+            android:layout_marginTop="56dp"
+            android:layout_marginEnd="166dp"
+            android:text="Player's Turn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtQuestion"
+            android:layout_width="178dp"
+            android:layout_height="53dp"
+            android:layout_marginTop="72dp"
+            android:text="Question"
+            android:textAlignment="center"
+            android:textSize="34sp"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            tools:layout_editor_absoluteX="116dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
