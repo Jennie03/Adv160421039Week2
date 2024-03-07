@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
+import com.google.android.material.navigationrail.NavigationRailView
 import com.ubaya.adv160421039week2.databinding.FragmentGameBinding
 import com.ubaya.adv160421039week2.databinding.FragmentMainBinding
 
@@ -28,6 +29,11 @@ class GameFragment : Fragment()
         }
         binding.btnBack.setOnClickListener{
             val action = GameFragmentDirections.actionMainFragment()
+            Navigation.findNavController(it).navigate(action)
+        }
+
+        binding.btnBukaTestFragment.setOnClickListener{
+            val action = GameFragmentDirections.actionTestFragment()
             Navigation.findNavController(it).navigate(action)
         }
     }

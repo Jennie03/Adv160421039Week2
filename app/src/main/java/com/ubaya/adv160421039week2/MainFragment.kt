@@ -36,7 +36,7 @@ class MainFragment : Fragment()
         var num2 = Random.nextInt(1, 100)
         binding.txtQuestion.text = "$num1 + $num2"
         var skor = 0
-        binding.btnSubmit.setOnClickListener{
+        binding.btnSubmit.setOnClickListener {
             val result = (num1 + num2)
             val input = binding.txtAnswer.text.toString().toInt()
             if (result == input.toInt()) {
@@ -52,11 +52,16 @@ class MainFragment : Fragment()
                 })
                 dialog.create().show()
             }
-            else {
-                val result = MainFragmentDirections.actionResultFragment(skor.toString())
+            else
+            {
+                val result = MainFragmentDirections.actionGameFragment(skor.toString())
                 Navigation.findNavController(it).navigate(result)
                 skor = 0
             }
+        }
+        binding.btnOption.setOnClickListener {
+            val action = MainFragmentDirections.actionOptionFragment()
+            Navigation.findNavController(it).navigate(action)
         }
     }
 }
